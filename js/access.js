@@ -1,5 +1,14 @@
 jQuery(function($) {
 
+    $(document).ready(function () {
+        /**
+         * Инициализация синтеза речи
+         */
+        $('body').ttsYa({
+            apikey: ''
+        })
+    });
+
 	$('.pop dt').click(function() {
 		$(this).toggleClass('opened').next().slideToggle('slow');
 		return false;

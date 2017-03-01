@@ -30,6 +30,7 @@ features[] = main_menu
 features[] = secondary_menu
 
 scripts[] = js/libs/modernizr-2.6.2-respond-1.1.0.min.js
+scripts[] = js/libs/jquery-ttsYa.js
 scripts[] = js/script.js
 scripts[] = js/plugins.js
 scripts[] = js/access.js

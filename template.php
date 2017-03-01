@@ -52,6 +52,14 @@ function accessibility_preprocess_html(&$vars) {
 }
 
 function accessibility_preprocess_page(&$vars, $hook) {
+  /**
+   * Подключение Яндекс API
+   * и чтобы в момент обращения к объекту ya.speechit.settings он был гарантированно загружен
+   * подгружаем второй строчкой и его
+   */
+  drupal_add_js('https://webasr.yandex.net/jsapi/v1/webspeechkit.js', 'external');
+  drupal_add_js('https://webasr.yandex.net/jsapi/v1/webspeechkit-settings.js', 'external');
+
   if (isset($vars['node_title'])) {
     $vars['title'] = $vars['node_title'];
   }
