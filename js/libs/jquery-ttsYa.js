@@ -38,23 +38,28 @@
                 delay: 3000
             }, options);
 
-            if (!ya.speechkit) {
+            try {
+                if (!ya.speechkit) {
 
-                $.error('Необходимо подключить API Яндекса для синтеза речи.');
-            } else {
-
-
-                if (settings.apikey) {
-
-                    tts = new ya.speechkit.Tts(settings);
-
-                    $(settings.element).bind('mouseenter.ttsYa', methods.speak);
-                    $(settings.element).bind('mouseleave.ttsYa', methods.abort);
+                    $.error('Необходимо подключить API Яндекса для синтеза речи.');
 
                 } else {
 
-                    $.error('Необходимо указать действующий apikey!.');
+                    if (settings.apikey) {
+
+                        tts = new ya.speechkit.Tts(settings);
+
+                        $(settings.element).bind('mouseenter.ttsYa', methods.speak);
+                        $(settings.element).bind('mouseleave.ttsYa', methods.abort);
+
+                    } else {
+
+                        $.error('Необходимо указать действующий apikey!.');
+                    }
                 }
+            } catch (err)  {
+
+                console.error(err);
             }
         },
         /**
@@ -96,15 +101,19 @@
      */
     $.fn.ttsYa = function (method) {
 
-        if (methods[method]) {
+        try {
+            if (methods[method]) {
 
-            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method) {
+                return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+            } else if (typeof method === 'object' || !method) {
 
-            return methods.init.apply(this, arguments);
-        } else {
+                return methods.init.apply(this, arguments);
+            } else {
 
-            $.error('Метод с именем ' + method + ' не существует для jQuery.ttsYa');
+                $.error('Метод с именем ' + method + ' не существует для jQuery.ttsYa');
+            }
+        } catch (err)  {
+            console.error(err);
         }
     };
 
