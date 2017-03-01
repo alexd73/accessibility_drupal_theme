@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
  * Here we override the default HTML output of drupal.
  * refer to http://drupal.org/node/550722

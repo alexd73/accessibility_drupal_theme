@@ -1,0 +1,50 @@
+body.color3 {
+	background:#9dd1ff;
+	color:#063462;
+}
+.color3 .hl{background:#063462;color:#9dd1ff;padding:1px 2px;}
+.color3 a,.color3 .published,.color3 .cat,.color3 .search .hentry .nom,.color3 .pop dd li a {color:#000000;}
+	.color3 .subnav li a:hover span{background:#b5dcff}
+.color3 .gnav li a,.color3 .subnav li a,.color3 .subnav li a.here,.color3 .switch_version a,.color3 .hentry h2 a,.color3 .pagi a,.color3 .access,.color3 .goup a,.color3 .closeme a{color:#063462}
+.color3 .gnav li a.here{background:#9dd1ff}
+.color3 .subnav li a.here span{background:#063462;color:#9dd1ff}
+.color3 .search1 .here,.color3 .search2 .here{color:#9dd1ff;background:#063462;text-shadow:none}
+
+.color3 .gnav li a.here,.color3 .letter .note {border-color:#555;}	
+.color3  .nav{border-color:#063462;}
+.color3 .footer,.color3 .related,.color3 .copy{border-color:#063462}
+.color3 .inp,.color3 .letter textarea{border-color:#063462;background:#9dd1ff;color:#063462}
+
+.color3 .a-fontsize dt, .color3 .access dt, .color3 .access a {text-shadow:none}
+.color3  .subnav li a:hover span {text-shadow:none;}
+
+.color3 .last a span,.color3  .search .row a span{border-color:#9dd1ff;color:#9dd1ff;background-image:url(../images/blue/blue_send.png);}
+.color3 .pop dt.opened{color:#9dd1ff;border-color:#063462;background:#063462;}
+.color3 .pop dt,.color3 .lica th,.color3 .lica td {border-color:#063462}
+
+.color3 .popg dd p{background-image:url(../images/blue/blue_dash.png)}
+.color3 .closeme a{background-image:url(../images/blue/blue_closeme.png)}
+.color3 .pop dd p.gos-addr{background-image:url(../images/blue/blue_gos-addr.png)}
+.color3 .pop dd p.gos-phone{background-image:url(../images/blue/blue_gos-phone.png)}
+.color3 .goup a{background-image: url(../images/blue/blue_up.png);}
+.color3 .pop dt.opened{background:#063462 url(../images/blue/blue_arrb.png) no-repeat 12px 50%;}
+.color3 .pop dt{background-image:url(../images/blue/blue_arrr.png)}
+.color3 .pagi a:hover span{border-color:#063462;background:#b5dcff}
+.color3 .pagi a.here span{background:#063462;border-color:#063462;color:#9dd1ff}
+.color3 .pagi a.here{background-image:url(../images/blue/blue_arr.png)}
+.color3 .gnav{background-image:url(../images/blue/blue_dot3.png)}
+.color3 .switch_version a{background-image:url(../images/blue/blue_normal.png)}
+.color3 .access{background-image:url(../images/blue_access.png)}
+.color3 .subnav li a.here{background-image:url(../images/blue/blue_arr.png)}
+.color3 .a-fontsize a{background-image:url(../images/blue/blue_fontsize.png);}
+.color3 .eng .a-colors a{background-image:url(colors00.png)}
+.color3 .a-colors a{background-image:url(../images/blue/blue_colors.png)}
+.color3 .eng .a-images a{background-image:url(../images/blue/eng/blue_images.png)}
+.color3 .a-images a{background-image:url(../images/blue/blue_images.png)}
+.color3 .a-search{background-image:url(../images/blue/blue_a-search.png)}
+.color3 .a-settings{background-image:url(../images/blue/blue_a-settings.png);}
+.color3 .printversion a{background-image:url(../images/blue/blue_print.png);}
+.color3 .pop dt, .color3 .copy,.color3 .searchresult,.color3 .pagi a span,.color3 .pagi a:hover span{
+	border-color:#063462;
+	}
+	

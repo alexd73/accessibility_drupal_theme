@@ -32,11 +32,14 @@ features[] = secondary_menu
 scripts[] = js/libs/modernizr-2.6.2-respond-1.1.0.min.js
 scripts[] = js/script.js
 scripts[] = js/plugins.js
+scripts[] = js/access.js
 
 plugins[panels][layouts] = layouts
 
 stylesheets[all][] = css/compiled/style.css
-
+stylesheets[all][] = css/template.css
+stylesheets[all][] = css/black.css
+stylesheets[all][] = css/blue.css
 stylesheets-conditional[lte IE 8][all][]  = css/compiled/ie8.css
 stylesheets-conditional[lte IE 7][all][]  = css/compiled/ie7.css
 stylesheets-conditional[lte IE 6][all][]  = css/compiled/ie6.css

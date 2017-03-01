@@ -1,8 +1,8 @@
 #page {
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #page {
     width: 100%;
   }
@@ -18,7 +18,7 @@ body, #page {
   height: 100%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   body {
     background: #fff;
     word-wrap: break-word;
@@ -26,7 +26,7 @@ body, #page {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   html, body {
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ body, #page {
 #main {
   position: relative;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #main {
     padding-bottom: 0px;
   }
@@ -70,7 +70,7 @@ body, #page {
 #sidebar-second {
   float: right;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #sidebar-second {
     float: none;
     clear: both;
@@ -81,9 +81,9 @@ body, #page {
 
 #footer {
   height: auto;
-  width: 800px;
+  width: 1000px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #footer {
     position: relative;
     width: 100%;
@@ -94,6 +94,13 @@ body, #page {
     position: relative;
     width: 100%;
   }
+}
+
+.region-footer, .region-highlight {
+  display: flex;
+}
+.region-footer .block, .region-highlight .block {
+  width: 33.3333333%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -121,11 +128,11 @@ body, #page {
 
 .two-sidebars .center,
 .sidebar-first .center {
-  margin-left: 23.75%;
+  margin-left: 19%;
 }
 
 #sidebar-first {
-  width: 23.75%;
+  width: 19%;
   margin-right: -190px;
 }
 @media only screen and (max-width: 480px) {
@@ -137,11 +144,11 @@ body, #page {
 
 .two-sidebars .center,
 .sidebar-second .center {
-  margin-right: 200px;
+  margin-right: 270px;
 }
 
 #sidebar-second {
-  width: 200px;
+  width: 270px;
 }
 @media only screen and (max-width: 480px) {
   #sidebar-second {
@@ -170,20 +177,20 @@ body, #page {
 }
 
 a {
-  color: blue;
+  color: black;
 }
 a:visited {
-  color: blue;
+  color: black;
 }
 a:hover {
-  color: red;
+  color: black;
 }
 a:focus {
-  color: red;
+  color: black;
   outline: thin dotted;
 }
 a:hover, a:active {
-  color: red;
+  color: black;
   text-decoration: underline;
   outline: 0;
 }
@@ -205,7 +212,6 @@ a:hover, a:active {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
-  color: black;
 }
 @media only screen and (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
@@ -405,7 +411,7 @@ ol ol ol {
   list-style-type: decimal;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   p img {
     float: left;
     margin: 0 10px 5px 0;
@@ -413,14 +419,25 @@ ol ol ol {
   }
 }
 
-@media only screen and (max-width: 800px) {
+img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
+}
+@media only screen and (max-width: 1000px) {
   img {
     border: 0;
     max-width: 100%;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   table {
     width: auto;
     border-collapse: collapse;
@@ -430,13 +447,13 @@ ol ol ol {
 
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(../js/boxsizing.htc);
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -556,13 +573,11 @@ div.view div.views-admin-links {
 }
 
 .floatleft, .fleft, .floatl {
-  display: inline;
   float: left;
   margin: 0 10px 5px 0;
 }
 
 .floatright, .fright, .floatr {
-  display: inline;
   float: right;
   margin: 0 0 5px 10px;
 }
@@ -620,7 +635,7 @@ html {
 
 html, button, input, select, textarea {
   font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
 }
 
 body {
@@ -635,13 +650,13 @@ body {
 
 ::-moz-selection {
   background: #fe57a1;
-  color: white;
+  color: #fff;
   text-shadow: none;
 }
 
 ::selection {
   background: #fe57a1;
-  color: white;
+  color: #fff;
   text-shadow: none;
 }
 
@@ -649,6 +664,7 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  max-width: 100%;
 }
 
 svg:not(:root) {
@@ -823,28 +839,10 @@ tr.odd {
 #sidebar-second,
 #content_top,
 #content_bottom {
-  border: 1px dotted #888888;
+  border: 1px dotted #888;
 }
 
-#header {
-  background: white;
-}
 
-#sidebar-first {
-  background: white;
-}
-
-#sidebar-second {
-  background: white;
-}
-
-#navigation {
-  background: white;
-}
-
-#footer {
-  background: white;
-}
 
 @media print {
   * {
@@ -893,8 +891,7 @@ tr.odd {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;

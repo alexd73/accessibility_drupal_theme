@@ -1,0 +1,57 @@
+body.color2 {
+	background:#000;
+	color:#fff; 
+}
+li a.active {
+	color: #fff;
+}
+.color2 .hl{background:#fff;color:#000;padding:1px 2px;}
+.color2 a,.color2 .published,.color2 .cat,.color2 .search .hentry .nom{color:#ddd;}
+	
+.color2 .gnav li a,.color2 .subnav li a,.color2 .subnav li a.here,.color2 .switch_version a,.color2 .hentry h2 a,.color2 .pagi a,.color2 .access,.color2 .goup a,.color2 .closeme a,.color2 .pop dd li a,.color2 .lica td a {color:#fff}
+.color2 .gnav li a.here{background:#000}
+.color2  .copy .url{color:#fff}
+.color2 .subnav li a.here span{background:#fff;color:#000}
+.color2 .subnav li a:hover,.color2 .search1 .here,.color2 .search2 .here{color:#000;}
+
+.color2 .gnav li a.here,.color2 .letter .note {border-color:#555;}	
+.color2  .nav{border-color:#333;}
+.color2 .footer,.color2 .related,.color2 .lica th,.color2 .lica td {border-color:#fff}
+.color2 .inp,.color2 .letter textarea{border-color:#fff;background:#000;color:#fff}
+
+.color2.a-fontsize dt, .color2 .access dt, .color2 .access a {text-shadow:none}
+.color2  .subnav li a:hover span {text-shadow:none;}
+
+
+.color2 .last a span,.color2  .search .row a span{border-color:#000;color:#000;background-image:url(../images/black/b_send.png);}
+.color2 .pop dt.opened{color:#000;border-color:#fff;background:#fff;}
+
+
+.color2 .popped{border-color:#fff;background:#000;color:#fff;}
+.color2 .popped a,.color2 .access .popped a {color:#fff}
+.color2 #out .font-family, .color2  #out .letter-spacing{color:#fff;border-color:#fff}
+.color2 #out .here.font-family,.color2 #out .here.letter-spacing,.color2.spacing-small #out #spacing-small,.color2.spacing-normal #out #spacing-normal,.color2.spacing-big #out  #spacing-big,.color2.serif #out  #serif,.color2.sans-serif #out #sans-serif{color:#000;background:#fff}
+.color2 #out .saveit a{background:#fff;border-color:#fff}
+.color2 .pagi a:hover span {text-shadow:none;}
+
+.color2 .popg dd p{background-image:url(../images/black/b_dash.png)}
+.color2 .closeme a{background-image:url(../images/black/b_closeme.png)}
+.color2 .pop dd p.gos-addr{background-image:url(../images/black/b_gos-addr.png)}
+.color2 .pop dd p.gos-phone{background-image:url(../images/black/b_gos-phone.png)}
+.color2 .pop dt.opened{background:#fff url(../images/black/b_arrb.png) no-repeat 12px 50%;}
+.color2 .pop dt{background-image:url(../images/black/b_arrr.png)}
+.color2 .pagi a:hover span{border-color:#fff;background:#555}
+.color2 .pagi a.here span{background:#fff;border-color:#fff;color:#000}
+.color2 .pagi a.here{background-image:url(../images/black/b_arr.png)}
+.color2 .gnav{background-image:url(../images/black/b_dot3.png)}
+.color2 .switch_version a{background-image:url(../images/black/b_normal.png)}
+.color2 .access{background-image:url(../images/black/b_access.png)}
+.color2 .subnav li a.here{background-image:url(../images/black/b_arr.png)}
+.color2 .a-fontsize a{background-image:url(../images/black/b_fontsize.png);}
+.color2 .a-colors a{background-image:url(../images/black/b_colors.png)}
+.color2 .eng .a-colors a{background-image:url(colors00.png)}
+.color2 .a-images a{background-image:url(../images/black/b_images.png)}
+.color2 .eng .a-images a{background-image:url(../images/black/eng/b_images.png)}
+.color2 .a-search{background-image:url(../images/black/b_a-search.png)}
+.color2 .a-settings{background-image:url(../images/black/b_a-settings.png);}
+.color2 .printversion a{background-image:url(../images/black/b_print.png);}
