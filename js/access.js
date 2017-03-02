@@ -1,14 +1,5 @@
 jQuery(function($) {
 
-    $(document).ready(function () {
-        /**
-         * Инициализация синтеза речи
-         */
-        $('body').ttsYa({
-            apikey: ''
-        })
-    });
-
 	$('.pop dt').click(function() {
 		$(this).toggleClass('opened').next().slideToggle('slow');
 		return false;
@@ -114,6 +105,19 @@ jQuery(function($) {
   set_font_family();
   set_letter_spacing();
 
+    $(document).ready(function () {
+        /**
+         * Инициализация синтеза речи
+         */
+        $('body').ttsYa({
+            apikey: ''
+        });
+
+        /**
+         * Инициализация синтеза речи SpeechSynthesisUtterance Интерфейс Web Speech API
+         */
+        $('body').speechSynthesis({});
+    });
 });
 
 
