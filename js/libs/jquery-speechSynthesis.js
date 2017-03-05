@@ -29,7 +29,8 @@
             settings = $.extend({
                 element: 'p',
                 lang: 'ru-Ru',
-                delay: 3000
+                delay: 3000,
+                maximum_length_string: 200
             }, options);
 
 
@@ -37,13 +38,8 @@
 
                 if ('speechSynthesis' in window) {
 
-                    audio = new SpeechSynthesisUtterance();
-
-                    audio.lang = settings.lang;
-
                     $(settings.element).bind('mouseenter.speechSynthesis', methods.speak);
                     $(settings.element).bind('mouseleave.speechSynthesis', methods.abort);
-
 
                 } else {
 
@@ -60,7 +56,7 @@
          */
         speak: function () {
 
-            audio.text = $(this).text();
+            var text = $(this).text();
 
             /**
              * Реализация пользовательской задержки перед воспроизведением
@@ -70,7 +66,14 @@
 
                 window.speechSynthesis.cancel();
 
-                window.speechSynthesis.speak(audio);
+                for (var i = 0; i < text.length / settings.maximum_length_string; i++ ){
+
+                    audio = new SpeechSynthesisUtterance();
+                    audio.lang = settings.lang;
+                    audio.text = text.slice(settings.maximum_length_string * i, settings.maximum_length_string * i + settings.maximum_length_string);
+
+                    window.speechSynthesis.speak(audio);
+                }
 
             }, settings.delay);
         },
