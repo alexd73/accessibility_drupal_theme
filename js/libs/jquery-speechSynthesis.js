@@ -13,8 +13,23 @@
     var audio,
         settings,
         methods,
-        timerId;
+        timerId,
+        fragments,
+        small_fragments,
+        checkWordRegExp = new RegExp('[a-zа-я0-9]', 'gi');
 
+    /**
+     * Создаем объект с настройками и ставим в очередь воспроизведения
+     * @param text
+     *          озвучиваемый текст
+     */
+    function createAudio (text) {
+        audio = new SpeechSynthesisUtterance();
+        audio.lang = settings.lang;
+        audio.text = text;
+
+        window.speechSynthesis.speak(audio);
+    }
 
     methods = {
         /**
@@ -27,10 +42,26 @@
              * Создаём настройки по-умолчанию, расширяя их с помощью параметров, которые были переданы
              */
             settings = $.extend({
+                /**
+                 * Элемент который необходимо озвучивать
+                 */
                 element: 'p',
+                /**
+                 * Язык озвучки
+                 */
                 lang: 'ru-Ru',
+                /**
+                 * Время удерание мышки над элементом, милисекунды
+                 */
                 delay: 3000,
-                maximum_length_string: 200
+                /**
+                 * Максимальная длина строки для озвучивания
+                 */
+                maximum_length_string: 200,
+                /**
+                 * Регулярное выражение для поиска предложений в длинном тексте
+                 */
+                pattern: '[^(\.(\?.)!]+?[(\.(\?.)!]+?'
             }, options);
 
 
@@ -66,14 +97,24 @@
 
                 window.speechSynthesis.cancel();
 
-                for (var i = 0; i < text.length / settings.maximum_length_string; i++ ){
+                fragments = text.match(new RegExp(settings.pattern, 'gi'));
 
-                    audio = new SpeechSynthesisUtterance();
-                    audio.lang = settings.lang;
-                    audio.text = text.slice(settings.maximum_length_string * i, settings.maximum_length_string * i + settings.maximum_length_string);
+                fragments.forEach(function (fragment) {
 
-                    window.speechSynthesis.speak(audio);
-                }
+                    if (checkWordRegExp.test(fragment)) {
+                        if (fragment.length > settings.maximum_length_string) {
+
+                            small_fragments = fragment.match(new RegExp('.{' + settings.maximum_length_string + ',}?[\s,-]', 'gi'));
+                            small_fragments.push(fragment.replace(new RegExp('.{' + settings.maximum_length_string + ',}?[\s,-]', 'gi'),''));
+
+                            small_fragments.forEach(function (small_fragment) {
+                                createAudio(small_fragment);
+                            });
+                        } else {
+                            createAudio(fragment);
+                        }
+                    }
+                });
 
             }, settings.delay);
         },
